@@ -24,7 +24,7 @@ resource "aws_elasticache_replication_group" "redis" {
   port               = "6379"
 
   tags {
-    Name        = "redis-replication-group"
+    Name        = "${var.redis_identifier}-${var.environment}-redis-replication-group"
     Environment = "${var.environment}"
   }
 }
